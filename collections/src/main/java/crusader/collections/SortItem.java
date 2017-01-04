@@ -9,8 +9,8 @@ public class SortItem<T> implements Comparable<SortItem> {
     private String label;
     private T item;
 
-    public SortItem(LabelProvider<T> sortValue, T item) {
-        this.label = sortValue.getLabel(item);
+    public SortItem(LabelProvider<T> labelProvider, T item) {
+        this.label = labelProvider.getLabel(item);
         this.item = item;
     }
 
